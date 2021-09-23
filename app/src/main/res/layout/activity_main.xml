@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/parentRelative"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_230sdp"
+        android:background="@drawable/sky_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/graphic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-9dp"
+            android:background="@drawable/graphic" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        app:cardCornerRadius="@dimen/_31sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parentRelative">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/current_time"
+                android:layout_width="179sp"
+                android:layout_height="17sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="18sp"
+                android:text="@string/sunday_19_may_2021_4_30_pm"
+                android:textAlignment="center"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/search_container"
+                android:layout_width="@dimen/_147sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/rectangle"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_result_search"
+                    android:layout_width="@dimen/_118sdp"
+                    android:layout_height="@dimen/_20ssp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_2ssp"
+                    android:text="@string/bishkek_kyrgyzstan"
+                    android:textAlignment="center"
+                    android:textColor="#0DA0EA"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/place_localizer"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:src="@drawable/place_localizer"
+                    app:tint="#0D9FEA" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/row_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_below="@+id/search_container"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_sunny"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="21dp"
+                    android:src="@drawable/vector_cloud"
+                    app:tint="#A39494" />
+
+                <TextView
+                    android:id="@+id/txt_sunny"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="22sp"
+                    android:layout_marginTop="51sp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_gradus"
+                    android:layout_width="@dimen/_60ssp"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/_43sdp"
+                    android:fontFamily="@font/zb"
+                    android:gravity="center"
+                    android:text="@string/degree"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="58sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_degree"
+                    android:layout_width="40sp"
+                    android:layout_height="20sp"
+                    android:layout_alignEnd="@+id/txt_gradus"
+                    android:layout_marginStart="-36dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="-40dp"
+                    android:layout_toEndOf="@+id/txt_gradus"
+                    android:src="@drawable/degree"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:id="@+id/temp_max"
+                    android:layout_width="35sp"
+                    android:layout_height="20sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginEnd="50sp"
+                    android:text="@string/maxDegree" />
+
+                <TextView
+                    android:id="@+id/temp_min"
+                    android:layout_width="35sp"
+                    android:layout_height="20sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="51sp"
+                    android:layout_marginEnd="50sp"
+                    android:text="@string/minDegree" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="10sp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="45dp"
+                    android:src="@drawable/ic_up" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="10sp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginEnd="45dp"
+                    android:src="@drawable/ic_down" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/row_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_below="@+id/row_1"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_humidity"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="53dp"
+                    android:src="@drawable/humidity"
+                    app:tint="#A39494" />
+
+                <TextView
+                    android:id="@+id/txt_humidity_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="54dp"
+                    android:layout_marginTop="30sp"
+                    android:text="@string/text_humidity"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="49dp"
+                    android:layout_marginTop="49sp"
+                    android:text="@string/humidity"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/size_9dp"
+                    app:tint="#A39494" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_barometer"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="53dp"
+                    android:contentDescription="@string/content"
+                    android:src="@drawable/barometer"
+                    app:tint="#A39494" />
+
+                <TextView
+                    android:id="@+id/txt_barometer_mBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30sp"
+                    android:text="@string/pressure_mBar"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_barometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="49sp"
+                    android:text="@string/text_pressure"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/dimens_pressure"
+                    app:tint="#A39494" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_wind"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="53dp"
+                    android:src="@drawable/wind"
+                    app:tint="#A39494" />
+
+                <TextView
+                    android:id="@+id/txt_wind_km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginEnd="43sp"
+                    android:text="@string/wind_23km_h"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="49sp"
+                    android:layout_marginEnd="56sp"
+                    android:text="@string/text_wind"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/dimens_wind"
+                    app:tint="#A39494" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/row_3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_below="@+id/row_2"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_sunrise"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="53dp"
+                    android:src="@drawable/sunrise"
+                    app:tint="#A39494" />
+
+                <TextView
+                    android:id="@+id/txt_sunrise_pm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="30sp"
+                    android:text="@string/sunrise_6_03_am"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_sunrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="49sp"
+                    android:text="@string/text_sunrise"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/dimens_sunrise"
+                    app:tint="#A39494" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_sunset"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="53dp"
+                    android:src="@drawable/sunset"
+                    app:tint="#A39494" />
+
+                <TextView
+                    android:id="@+id/txt_sunset_pm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30sp"
+                    android:text="@string/sunset_8_05_pm"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_sunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="49sp"
+                    android:text="@string/text_sunset"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/dimens_sunset"
+                    app:tint="#A39494" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_dayTime"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="53dp"
+                    android:src="@drawable/sand_clock"
+                    app:tint="#A39494" />
+
+                <TextView
+                    android:id="@+id/txt_dayTime_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginEnd="43sp"
+                    android:text="@string/dayTime_13h_1m"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_dayTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="49sp"
+                    android:layout_marginEnd="50sp"
+                    android:text="@string/text_dayTime"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/dimens_dayTime"
+                    app:tint="#A39494"
+                    tools:ignore="RelativeOverlap" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_below="@+id/row_3"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/_18sdp"
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/list_week" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <include
+                android:id="@+id/bottom_sheet"
+                layout="@layout/bottom_sheet" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
