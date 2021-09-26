@@ -11,7 +11,6 @@ import kotlinx.coroutines.Dispatchers
 
 class Repository {
 
-
     private var weatherApi:WeatherApi = RetrofitBuilder.create()
 
     fun getAllCurrentWeather(city:String):LiveData<Resource<WeatherModel>> = liveData(Dispatchers.IO){

@@ -41,7 +41,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
             <TextView
                 android:id="@+id/current_time"
                 android:layout_width="179sp"
@@ -95,7 +94,6 @@
                 android:layout_marginTop="@dimen/_18sdp"
                 android:orientation="horizontal">
 
-
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/image_sunny"
                     android:layout_width="40dp"
@@ -113,9 +111,11 @@
                     android:layout_height="20sp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="22sp"
+                    android:layout_marginStart="42sp"
                     android:layout_marginTop="51sp"
-                    android:textColor="@color/black" />
+                    android:text="@string/sunny"
+                    android:textColor="@color/black"
+                    tools:ignore="RelativeOverlap" />
 
                 <TextView
                     android:id="@+id/txt_gradus"
@@ -401,9 +401,7 @@
                     app:tint="#A39494"
                     tools:ignore="RelativeOverlap" />
 
-
             </RelativeLayout>
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
